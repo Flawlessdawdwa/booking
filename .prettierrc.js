@@ -1,7 +1,21 @@
 module.exports = {
   arrowParens: 'avoid',
-  bracketSameLine: true,
-  bracketSpacing: false,
+  bracketSameLine: false,
   singleQuote: true,
   trailingComma: 'all',
+  importOrder: [
+    '<THIRD_PARTY_MODULES>',
+    '^@/constants/(.*)$',
+    '^@/config/(.*)$',
+    '^@/context/(.*)$',
+    '^@/screens/(.*)$',
+    '^@/utils/(.*)$',
+    '^@/components/(.*)$',
+    '^@/hooks/(.*)$',
+    '^@/theme/(.*)$',
+    '^@/interfaces/(.*)$',
+    '^[./]',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };
