@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
@@ -67,6 +67,62 @@ You've successfully run and modified your React Native App. :partying_face:
 # Troubleshooting
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# styling, formating
+
+- folder name: example-folder
+- file name: ExampleComponent.tsx
+- if folder includes multiple files (folder name: something):
+
+  - HotelComponent.tsx
+  - SomeComponent.tsx
+  - SomeComponent.tsx
+  - index.ts
+    - import {SomeComponent, SomeComponent, SomeComponent} @/example/components
+
+# CI/CD
+
+- `main` (prodcution)
+- `staging` (for stage tests)
+- `testing` (for testers)
+- `dev` (for developers)
+
+- version flow
+  - `dev` is work branch
+  - `new-branch` is off of `staging`
+  - `new-branch` -> testing
+  - `new-branch` -> staging
+  - new release from `staging` to `main`
+- merge conflict
+
+  - off of local branch git checkout -b `new-conflict-branch`
+  - from `new-conflict-branch` -> git pull origing <testing, staging, dev>
+
+- branch name examples
+  - fix.<ticketId>.navigation-flick
+  - feat.<ticketId>.otp-auth
+  - hotfix.scl215.something
+
+| inital   | meaning                                                               |
+| -------- | --------------------------------------------------------------------- |
+| `hotfix` | for quickly fixing critical issues, usually with a temporary solution |
+| `fix`    | for fixing a bug                                                      |
+| `feat`   | for adding, removing or modifying a feature                           |
+| `test`   | for experimenting something which is not an issue                     |
+| `wip`    | for a work in progress                                                |
+
+# Needed commands
+
+```
+watchman watch-del-all
+npm cache clean
+
+# Android, if you encounter `com.android.dex.DexException: Multiple dex files define Landroid/support/v7/appcompat/R$anim`, then clear build folder.
+
+cd android
+./gradlew clean
+cd ..
+```
 
 # Learn More
 
