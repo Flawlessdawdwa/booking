@@ -4,7 +4,7 @@ import { MainStackRoutes } from '@/interfaces/navigation';
 import { Hilton, Marriot } from '@/theme/assets/images';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface HotelDetails {
@@ -25,7 +25,7 @@ const Explore = () => {
 
   return (
     <View style={styles.container}>
-      <SafeAreaView>
+      <SafeAreaView style={styles.safeArea}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ paddingBottom: bottom }}
@@ -67,6 +67,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFF',
     paddingHorizontal: 24,
+  },
+  safeArea: {
+    flex: 1,
   },
 });
 

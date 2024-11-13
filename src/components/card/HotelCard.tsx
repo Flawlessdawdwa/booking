@@ -65,12 +65,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E5E7EB',
     borderRadius: 24,
+    flex: 1,
   },
   cardDescriptions: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
+    marginHorizontal: 16,
   },
   distanceWrapper: {
     flexDirection: 'row',
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
     color: '#F49300',
   },
   title: {
-    paddingHorizontal: 16,
+    marginHorizontal: 16,
     fontWeight: '600',
     fontSize: 14,
     lineHeight: 22,
@@ -102,8 +103,8 @@ const styles = StyleSheet.create({
   },
   pricesWrapper: {
     marginTop: 16,
-    paddingHorizontal: 16,
-    paddingBottom: 16,
+    marginHorizontal: 16,
+    marginBottom: 16,
   },
   prices: {
     flexDirection: 'row',
