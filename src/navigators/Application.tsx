@@ -9,7 +9,9 @@ import { StatusBar } from 'react-native';
 import { ApplicationStackParamList } from '@/interfaces/navigation';
 
 import MainNavigator from './Main';
+import { HotelDetails } from '@/screens';
 
+//@ts-ignore temporary ignoring paramlist
 const Stack = createNativeStackNavigator<ApplicationStackParamList>();
 
 const ApplicationNavigator = () => {
@@ -27,6 +29,7 @@ const ApplicationNavigator = () => {
           initialRouteName={'Main'}
         >
           <Stack.Screen name="Main" component={MainNavigator} />
+          <Stack.Screen name="HotelDetails" component={HotelDetails} />
         </Stack.Navigator>
       </>
     </NavigationContainer>

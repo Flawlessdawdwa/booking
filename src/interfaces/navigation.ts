@@ -13,9 +13,9 @@ export enum MainTabRoutes {
   CONTACTS = 'Contacts',
 }
 
-export enum MainStackRoutes {}
-
-export enum ModalRoutes {}
+export enum MainStackRoutes {
+  HOTEL_DETAILS = 'HotelDetails',
+}
 
 export type MainParamsList = {
   [MainTabRoutes.EXPLORE]: undefined;
@@ -25,6 +25,8 @@ export type MainParamsList = {
 };
 
 export type ApplicationStackParamList = {
+  [MainStackRoutes.HOTEL_DETAILS]: undefined;
+
   Main: NavigatorScreenParams<MainParamsList>;
 };
 

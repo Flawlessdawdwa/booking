@@ -15,7 +15,7 @@ import { Contacts, Explore, Information, Stadiums } from '@/screens';
 import { MainParamsList, MainTabRoutes } from '@/interfaces/navigation';
 import { useBottomNavigationSizes } from '@/hooks';
 
-//@ts-ignore
+//@ts-ignore temporary ingoring paramlist
 const Tab = createBottomTabNavigator<MainParamsList>();
 
 const MainNavigator = () => {
@@ -64,7 +64,7 @@ const MainNavigator = () => {
         component={Stadiums}
         options={{
           tabBarLabel: 'Stadiums',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ color, focused }: any) => (
             <TabBarIcon focused={focused} color={color}>
               <TabIconStadiums color={color} />
             </TabBarIcon>
@@ -76,7 +76,7 @@ const MainNavigator = () => {
         component={Information}
         options={{
           tabBarLabel: 'Information',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ color, focused }: any) => (
             <TabBarIcon focused={focused} color={color}>
               <TabIconInformation color={color} />
             </TabBarIcon>
@@ -88,7 +88,7 @@ const MainNavigator = () => {
         component={Contacts}
         options={{
           tabBarLabel: 'Contacts',
-          tabBarIcon: ({ color, focused }) => (
+          tabBarIcon: ({ color, focused }: any) => (
             <TabBarIcon focused={focused} color={color}>
               <TabIconContacts color={color} />
             </TabBarIcon>
