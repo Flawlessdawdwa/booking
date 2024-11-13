@@ -1,6 +1,13 @@
 import { Price, Route, Star } from '@/theme/assets/images';
 import React, { FC } from 'react';
-import { View, Text, Pressable, Image, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  Pressable,
+  Image,
+  StyleSheet,
+  Linking,
+} from 'react-native';
 
 type HotelCardProps = {
   SvgImg: FC;
@@ -41,7 +48,10 @@ const HotelCard: FC<HotelCardProps> = ({
             <Image source={require('@/theme/assets/images/booking.png')} />
           </View>
 
-          <Pressable style={styles.viewButton}>
+          <Pressable
+            style={styles.viewButton}
+            onPress={() => Linking.openURL('https://zoftify.com')}
+          >
             <Text style={styles.viewText}>View prices</Text>
           </Pressable>
         </View>

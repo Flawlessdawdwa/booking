@@ -7,6 +7,7 @@ import {
   ScrollView,
   Dimensions,
   Pressable,
+  Linking,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'react-native';
@@ -64,7 +65,10 @@ const HotelDetails = () => {
         </ScrollView>
       </View>
       <View style={styles.fixedButtonContainer}>
-        <Pressable style={styles.checkButton}>
+        <Pressable
+          style={styles.checkButton}
+          onPress={() => Linking.openURL('https://zoftify.com')}
+        >
           <Text style={styles.checkButtonText}>Check availability</Text>
         </Pressable>
       </View>
@@ -113,7 +117,7 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#FFF',
     borderTopWidth: 1,
-    borderTopColor: '#FEFEFE',
+    borderTopColor: '#F3F4F6',
   },
   checkButton: {
     backgroundColor: '#F49300',
