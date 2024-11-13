@@ -7,6 +7,7 @@ type HotelCardProps = {
   distance: string;
   title: string;
   starsQuantity: number;
+  onPress: () => void;
 };
 
 const HotelCard: FC<HotelCardProps> = ({
@@ -14,10 +15,13 @@ const HotelCard: FC<HotelCardProps> = ({
   distance,
   title,
   starsQuantity,
+  onPress,
 }) => {
   return (
     <View style={styles.container}>
-      <SvgImg />
+      <Pressable onPress={onPress}>
+        <SvgImg />
+      </Pressable>
       <View style={styles.cardDescriptions}>
         <View style={styles.distanceWrapper}>
           <Route />
